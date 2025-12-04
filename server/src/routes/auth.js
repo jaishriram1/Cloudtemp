@@ -32,7 +32,7 @@ router.post("/signup", async (req, res) => {
 
     // Create Account (Credentials provider)
     await Account.create({
-      accountId: Math.random().toString(36).substr(2, 9),
+      accountId: Math.random().toString(36).substring(2, 9),
       providerId: "credentials",
       userId: user._id,
       password: hashedPassword,
